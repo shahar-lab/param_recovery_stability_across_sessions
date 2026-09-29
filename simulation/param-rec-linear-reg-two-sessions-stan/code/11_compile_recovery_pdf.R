@@ -1,0 +1,17 @@
+# reads: artifacts/p_population_location.rds, artifacts/p_population_scale.rds,
+#        artifacts/p_icc.rds, artifacts/p_individual_recovery.rds
+# writes: output/11_recovery_figures.pdf
+
+#### COMPILE RECOVERY PDF ####
+
+p_location <- readRDS(file.path(artifacts_dir, "p_population_location.rds"))
+p_scale    <- readRDS(file.path(artifacts_dir, "p_population_scale.rds"))
+p_icc      <- readRDS(file.path(artifacts_dir, "p_icc.rds"))
+p_indiv    <- readRDS(file.path(artifacts_dir, "p_individual_recovery.rds"))
+
+pdf(file.path(output_dir, "11_recovery_figures.pdf"), width = 10, height = 8, onefile = TRUE)
+print(p_location)
+print(p_scale)
+print(p_icc)
+print(p_indiv)
+dev.off()

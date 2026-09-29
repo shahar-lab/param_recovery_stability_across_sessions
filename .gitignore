@@ -1,0 +1,9 @@
+# Compiled Stan binaries
+*.exe
+
+# Large regenerable model fits / draw dumps
+**/artifacts/*_fit.rds
+**/artifacts/draws_sbj.rds
+
+# Local orchestrator state
+.malka/
