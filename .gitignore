@@ -1,9 +1,9 @@
 # Compiled Stan binaries
 *.exe
 
-# Large regenerable model fits / draw dumps
-**/artifacts/*_fit.rds
-**/artifacts/draws_sbj.rds
+# Simulation artifacts (regenerable from main.R); keep the empty folders
+**/artifacts/*
+!**/artifacts/.gitkeep
 
 # Local orchestrator state
 .malka/
